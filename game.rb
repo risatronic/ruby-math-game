@@ -43,10 +43,14 @@ class Game
       end
     end
 
+    puts "---GAME OVER---"
+
     if player1.lives == 0
       puts "Player 2 wins in #{round} rounds with #{player2.lives}/3 lives remaining"
     elsif player2.lives == 0
       puts "Player 1 wins in #{round} rounds with #{player1.lives}/3 lives remaining"
     end
+
+    puts "Goodbye!"
   end
 end
