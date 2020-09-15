@@ -15,7 +15,7 @@ class Game
 
     puts "Welcome to ~Ruby Math Game~!"
 
-    while(!game_over)
+    while !game_over
       question = Question.new
       puts "---ROUND #{round}---"
       puts "#{@current_player.name}: #{question.ask_question}"
@@ -30,15 +30,15 @@ class Game
 
       puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
 
-      if(@current_player.lives == 0)
+      if @current_player.lives == 0
         puts "Oh no, you lost!"
         game_over = true
-      elsif(@current_player == player1)
+      elsif @current_player == player1
         @current_player = player2
       else 
         @current_player = player1
       end
-      if(!game_over)
+      if !game_over
         round += 1
       end
     end
